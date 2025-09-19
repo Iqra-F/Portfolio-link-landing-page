@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
 export default function PortfolioLanding() {
   return (
@@ -30,7 +30,10 @@ export default function PortfolioLanding() {
           className="absolute bottom-1/3 right-1/4 w-12 h-12 bg-black/15 rotate-12 animate-spin"
           style={{ animationDuration: "6s", animationDirection: "reverse" }}
         ></div>
-
+        <div
+          className="absolute bottom-8 right-5 w-16 h-16 bg-teal-600/25 rotate-45 animate-spin"
+          style={{ animationDuration: "8s" }}
+        ></div>
         {/* Moving lines */}
         <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-teal-500/30 to-transparent animate-pulse"></div>
         <div
@@ -71,20 +74,22 @@ export default function PortfolioLanding() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 flex justify-between items-center p-6">
-        <div className="text-2xl font-bold text-black">IF</div>
-        <button className="text-black hover:text-teal-600 transition-colors">
+      <nav className="relative z-10 flex justify-between items-center px-6">
+        {/* <div className="text-2xl font-bold text-black">IF</div> */}
+        {/* <button className="text-black hover:text-teal-600 transition-colors">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-        </button>
+        </button> */}
       </nav>
 
       {/* Main Content */}
-      <main className="relative z-10 flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
+      <main className="relative z-10 flex flex-col items-center justify-center min-h-[100vh] px-6 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Small intro text */}
-          <p className="text-teal-600 font-medium mb-4 tracking-wider uppercase text-sm">Welcome to my portfolio</p>
+          <p className="text-teal-600 font-medium mb-4 tracking-wider uppercase text-sm">
+            Welcome to my portfolio
+          </p>
 
           {/* Main heading */}
           <h1 className="text-6xl md:text-8xl font-bold text-black mb-6 leading-tight">
@@ -92,34 +97,41 @@ export default function PortfolioLanding() {
           </h1>
 
           {/* Subtitle */}
-          <h2 className="text-2xl md:text-4xl font-light text-black/80 mb-8">
+          <h2 className="text-2xl md:text-4xl  text-black/80 mb-8">
             Full Stack Developer
             <span className="text-teal-600 font-medium"> + </span>
-            MERN Stack Specialist
+            MERN, Next.js, Typescript, Python Specialist
           </h2>
 
-          {/* Description */}
-          <p className="text-lg text-black/70 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Crafting digital experiences with modern web technologies. Passionate about creating scalable applications
-            and beautiful user interfaces.
-          </p>
+          <div className=" left-1/2 transform -translate-x-1/2">
+            <div className="h-6 w-16 border-2 border-black/30 rounded-full flex justify-center">
+              <div className="h-1 w-5 bg-teal-600 rounded-full mt-2 animate-spin "></div>
+            </div>
+          </div>
 
           {/* CTA Button */}
           <Button
+            asChild
             size="lg"
             className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            Visit Portfolio
+            <a
+              href="https://iqra-portfolio.pages.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Portfolio
+            </a>
           </Button>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="w-6 h-10 border-2 border-black/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-teal-600 rounded-full mt-2 animate-bounce"></div>
+        {/* <div className="absolute lg:bottom-3 left-1/2 transform -translate-x-1/2">
+          <div className="h-6 w-16 border-2 border-black/30 rounded-full flex justify-center">
+            <div className="h-1 w-5 bg-teal-600 rounded-full mt-2 animate-spin "></div>
           </div>
-        </div>
+        </div> */}
       </main>
     </div>
-  )
+  );
 }
