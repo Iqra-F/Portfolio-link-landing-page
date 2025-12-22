@@ -30,9 +30,7 @@ export default function PortfolioLanding() {
           size="lg"
           className="bg-teal-500 hover:bg-teal-400 text-black px-12 py-6 text-xl font-bold rounded-lg transition-all duration-300 hover:scale-110 shadow-[0_0_30px_rgba(20,184,166,0.5)] hover:shadow-[0_0_50px_rgba(20,184,166,0.8)]"
         >
-          <a href="https://iqra-portfolio.pages.dev/" target="_blank" rel="noopener noreferrer">
-            Visit Portfolio
-          </a>
+          <a href="https://iqra-portfolio.pages.dev/">Visit Portfolio</a>
         </Button>
       </div>
 
